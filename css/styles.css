@@ -154,3 +154,41 @@
         object-fit: cover;
       }
       
+
+
+
+
+      /*-----------------------------------------------------------------------------------*/
+/*  Footer
+/*-----------------------------------------------------------------------------------*/
+
+#footer {
+  text-align: center;
+  width: 100%;
+  margin-top: 120px; /* Cambiado de margin-bottom a margin-top */
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  opacity: 0.8;
+}
+
+#footer p {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.credits {
+  font-size: 12px;
+}
+.fa-heart {
+  color: rgb(250, 88, 76);
+}
+
+.rpao {
+  color: #b8a07e;
+}
+.legox:hover {
+  color: red;
+}
