@@ -6,7 +6,7 @@
 }
 
   .logo-rp {
-    width: 150px;
+    width: 200px;
   }
 
 
@@ -126,3 +126,31 @@
           background-color: rgba(8, 8, 8, 0.562); /* Fondo negro para cada elemento de la lista */
           text-align: center; /* Centrar el texto */
       }
+
+
+      .carousel-inner img {
+        max-height: 250px; /* Ajusta la altura máxima de las imágenes derecha */
+        object-fit: cover;
+      }
+      
+      .carousel-inner .h-100 {
+        max-height: none;
+      }
+      
+      #carouselLarge .carousel-inner img {
+        max-height: none; /* Elimina la restricción de altura para la imagen grande */
+        height: 100%;
+      }
+      
+      /* Añadimos mayor especificidad para mt-custom */
+      section.container .row .col-12.mt-custom {
+        margin-top: 1rem; /* Ajusta este valor según tus necesidades */
+      }
+      
+      /* Ajusta el tamaño de las imágenes de la columna derecha */
+      #carouselTopRight .carousel-inner img,
+      #carouselBottomRight .carousel-inner img {
+        max-height: 400px; /* Ajusta la altura máxima de las imágenes de la derecha */
+        object-fit: cover;
+      }
+      
