@@ -1,18 +1,13 @@
 .bg-container {
   background: url('../img/bg.jpg') no-repeat center center fixed; 
   background-size: cover;
-  min-height: 100vh; /* Asegura que el contenedor cubra toda la altura de la ventana */
+  min-height: 100vh;
   width: 100%;
 }
 
-  .logo-rp {
-    width: 200px;
-  }
-
-
-/* Buttons */
-
-
+.logo-rp {
+  width: 200px;
+}
 
 .navbar ul {
   list-style: none;
@@ -33,7 +28,7 @@
 
 .navbar img {
   display: block;
-  width: 160px; /* Ajusta según el tamaño de tus imágenes */
+  width: 120px;
   height: auto;
   transition: opacity 0.3s ease;
 }
@@ -48,13 +43,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 160px; /* Ajusta según el tamaño de tus imágenes */
-  height: 100%; /* Ajusta según el tamaño de tus imágenes */
+  width: 120px;
+  height: 71%;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+@media (max-width: 576px) {
+  .nav-button::before {
+    width: 100px; /* Ajusta el ancho según sea necesario para pantallas pequeñas */
+    height: 55%; /* Ajusta la altura según sea necesario para pantallas pequeñas */
+  }
+}
+
+
 
 .nav-button:hover::before {
   opacity: 1;
@@ -80,92 +84,89 @@
   background-image: url('/img/Wiki-pres.png');
 }
 
-        /* Estilo para la sección Donaciones */
-        section.Donaciones {
+section.Donaciones {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-          padding: 20px; /* Añadir relleno para separación del borde */
-          display: flex;
-          flex-direction: column;
-          justify-content: center; /* Centrar verticalmente */
-          align-items: center; /* Centrar horizontalmente */
-       
-      }
+.divsection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-      /* Estilo para el nuevo div */
-      .divsection {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center; /* Centrar horizontalmente */
-          
-      }
+section.Donaciones h3 {
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
+}
 
-      /* Estilo para el texto dentro de la sección Donaciones */
-      section.Donaciones h3 {
-          text-align: center;
-          margin-top: 2rem; /* Añadir margen inferior para separación */
-          color: white;
-      }
+section.Donaciones ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-      /* Estilo para la lista ordenada */
-      section.Donaciones ol {
-          list-style: none; /* Quitar viñetas predeterminadas */
-          padding: 0; /* Quitar relleno por defecto */
-          margin: 0; /* Quitar margen por defecto */
-          display: flex;
-          flex-direction: column; /* Asegurar que los elementos se apilen en columna */
-          align-items: center; /* Centrar los elementos horizontalmente */
-          width: 100%;
-      }
+section.Donaciones li {
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: rgba(8, 8, 8, 0.562);
+  text-align: center;
+}
 
-      /* Estilo para cada elemento de la lista dentro de la sección Donaciones */
-      section.Donaciones li {
-          color: white; /* Texto blanco para cada elemento de la lista */
-          padding: 10px; /* Espaciado interior para mayor legibilidad */
-          margin: 10px 0; /* Espaciado exterior para separación entre elementos */
-          background-color: rgba(8, 8, 8, 0.562); /* Fondo negro para cada elemento de la lista */
-          text-align: center; /* Centrar el texto */
-      }
+.carousel-inner img {
+  max-height: 250px;
+  object-fit: cover;
+}
 
+.carousel-inner .h-100 {
+  max-height: none;
+}
 
-      .carousel-inner img {
-        max-height: 250px; /* Ajusta la altura máxima de las imágenes derecha */
-        object-fit: cover;
-      }
-      
-      .carousel-inner .h-100 {
-        max-height: none;
-      }
-      
-      #carouselLarge .carousel-inner img {
-        max-height: none; /* Elimina la restricción de altura para la imagen grande */
-        height: 100%;
-      }
-      
-      /* Añadimos mayor especificidad para mt-custom */
-      section.container .row .col-12.mt-custom {
-        margin-top: 1rem; /* Ajusta este valor según tus necesidades */
-      }
-      
-      /* Ajusta el tamaño de las imágenes de la columna derecha */
-      #carouselTopRight .carousel-inner img,
-      #carouselBottomRight .carousel-inner img {
-        max-height: 400px; /* Ajusta la altura máxima de las imágenes de la derecha */
-        object-fit: cover;
-      }
-      
+#carouselLarge .carousel-inner img {
+  max-height: none;
+  height: 100%;
+}
+
+section.container .row .col-12.mt-custom {
+  margin-top: 1rem;
+}
+
+#carouselTopRight .carousel-inner img,
+#carouselBottomRight .carousel-inner img {
+  max-height: 400px;
+  object-fit: cover;
+}
 
 
 
 
-      /*-----------------------------------------------------------------------------------*/
-/*  Footer
-/*-----------------------------------------------------------------------------------*/
+@media (max-width: 576px) {
+  #carouselTopRight .carousel-inner .carousel-item img {
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+  }
+}
+
+
+
+
+
+
+
 
 #footer {
   text-align: center;
   width: 100%;
-  margin-top: 120px; /* Cambiado de margin-bottom a margin-top */
+  margin-top: 120px;
   color: #ffffff;
   font-family: "Kanit", sans-serif;
   opacity: 0.8;
@@ -182,6 +183,7 @@
 .credits {
   font-size: 12px;
 }
+
 .fa-heart {
   color: rgb(250, 88, 76);
 }
@@ -189,6 +191,106 @@
 .rpao {
   color: #b8a07e;
 }
-.legox:hover {
+
+.rpao:hover {
   color: red;
 }
+
+@media (max-width: 768px) {
+  .logo-rp {
+    width: 150px;
+  }
+
+  .navbar img {
+    width: 120px;
+  }
+
+  .carousel-inner img {
+    max-height: 200px;
+  }
+
+  #carouselTopRight .carousel-inner img,
+  #carouselBottomRight .carousel-inner img {
+    max-height: 300px;
+  }
+
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mt-custom {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar img {
+    width: 100px;
+  }
+
+  .carousel-inner img {
+    max-height: 150px;
+  }
+}
+
+.navbar-toggler {
+  border-color: white; /* Color del borde del botón toggle */
+  background-color: white; /* Color de fondo del botón toggle */
+  box-shadow: none; /* Elimina la sombra por defecto si la hubiera */
+  outline: none !important; /* Elimina cualquier contorno en todos los estados */
+}
+
+
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.logo-rp {
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  .logo-rp {
+    width: 150px;
+  }
+
+  .navbar img {
+    width: 120px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-bottom: 1rem;
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .navbar img {
+    width: 100px;
+  }
+}
+
+
